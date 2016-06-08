@@ -22,3 +22,6 @@ endif
     Bundle 'Quramy/tsuquyomi'
     Bundle 'mattn/emmet-vim'
     Bundle 'aperezdc/vim-template'
+    
+" theme
+    Bundle 'vim-airline/vim-airline-themes
