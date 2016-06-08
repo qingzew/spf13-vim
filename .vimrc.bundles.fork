@@ -24,4 +24,4 @@ endif
     Bundle 'aperezdc/vim-template'
     
 " theme
-    Bundle 'vim-airline/vim-airline-themes
+    Bundle 'vim-airline/vim-airline-themes'
