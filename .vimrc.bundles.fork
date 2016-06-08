@@ -25,4 +25,4 @@ endif
     
 " theme
     Bundle 'vim-airline/vim-airline-themes'
-    Bundle 'kien/rainbow_parentheses.vim'
+    Bundle 'luochen1990/rainbow'
