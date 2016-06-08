@@ -1,0 +1,58 @@
+let g:DisableAutoPHPFolding = 1
+
+let NERDTreeQuitOnOpen = 0
+set nospell
+
+if has('gui_running')
+    color wombat_btl
+    if has("gui_gtk2")
+        set guifont=Andale\ Mono\ Regular\ 11,Menlo\ Regular\ 10,Consolas\ Regular\ 11,Courier\ New\ Regular\ 13
+    else
+        set guifont=Andale\ Mono\ Regular:h14,Menlo\ Regular:h13,Consolas\ Regular:h14,Courier\ New\ Regular:h16
+    endif
+    if has('gui_macvim')
+        set transparency=2          " Make the window slightly transparent
+    endif
+endif
+
+" ShowMarks {
+    let showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    " Don't leave on by default, use :ShowMarksOn to enable
+    let g:showmarks_enable = 0
+    " For marks a-z
+    highlight ShowMarksHLl gui=bold guibg=LightBlue guifg=Blue
+    " For marks A-Z
+    highlight ShowMarksHLu gui=bold guibg=LightRed guifg=DarkRed
+    " For all other marks
+    highlight ShowMarksHLo gui=bold guibg=LightYellow guifg=DarkYellow
+    " For multiple marks on the same line.
+    highlight ShowMarksHLm gui=bold guibg=LightGreen guifg=DarkGreen
+" }
+set autoread                    " automatically reads, helpful when VCS may have changed the file
+
+" NERDTree {
+    let g:nerdtree_tabs_open_on_gui_startup=1
+    let g:nerdtree_tabs_open_on_new_tab=1
+    let NERDTreeMouseMode=1
+" }
+
+" Make sure escape always takes you out of neocomplettion mode
+    iunmap <expr> <Esc>
+
+" Configure typescript completion
+
+autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
+autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
+
+set nocompatible
+set completeopt+=menuone
+set rtp+=~/.vim/bundle/neocomplete.vim/
+set rtp+=~/.vim/bundle/vimproc.vim/
+set rtp+=~/.cache/neocomplete/tsuquyomi/
+
+filetype plugin indent on
+let g:neocomplete#enable_at_startup = 1
+if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.typescript = '[^. *\t]\.\w*\|\h\w*::'
