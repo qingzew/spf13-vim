@@ -13,3 +13,5 @@ if !exists("g:spf13_bundle_groups")
 endif
 
 let g:spf13_override_snippets = 1
+
+let g:rainbow_active = 1
