@@ -22,7 +22,7 @@ endif
     Bundle 'Quramy/tsuquyomi'
     Bundle 'mattn/emmet-vim'
     Bundle 'aperezdc/vim-template'
-    
+    Bundle 'uarun/vim-protobuf'
 " theme
     Bundle 'vim-airline/vim-airline-themes'
     Bundle 'luochen1990/rainbow'
