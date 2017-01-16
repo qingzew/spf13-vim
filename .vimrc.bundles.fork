@@ -20,9 +20,6 @@ endif
     Bundle 'jason0x43/vim-js-indent'
     Bundle 'leafgarland/typescript-vim'
     Bundle 'Quramy/tsuquyomi'
-    Bundle 'mattn/emmet-vim'
     Bundle 'aperezdc/vim-template'
     Bundle 'uarun/vim-protobuf'
 " theme
-    Bundle 'vim-airline/vim-airline-themes'
-    Bundle 'luochen1990/rainbow'
