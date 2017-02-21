@@ -58,3 +58,8 @@ endif
 let g:neocomplete#force_omni_input_patterns.typescript = '[^. *\t]\.\w*\|\h\w*::'
 
 set foldlevel=1
+
+imap <C-h> <left>
+imap <C-j> <down>
+imap <C-k> <up>
+imap <C-l> <right>
