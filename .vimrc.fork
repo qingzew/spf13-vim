@@ -59,6 +59,19 @@ let g:neocomplete#force_omni_input_patterns.typescript = '[^. *\t]\.\w*\|\h\w*::
 
 set foldlevel=1
 
+" for templates
+let g:license = 'LGPL3'
+let g:templates_directory = '~/.templates'
+
+let g:templates_user_variables = [
+        \ ['COMPANY', 'GetCOMPANY'],
+        \ ]
+
+function! GetCOMPANY()
+    return 'your company'
+endfunction
+
+
 imap <C-h> <left>
 imap <C-j> <down>
 imap <C-k> <up>
