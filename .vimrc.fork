@@ -61,7 +61,7 @@ set foldlevel=1
 
 " for templates
 let g:license = 'LGPL3'
-let g:templates_directory = '~/.templates'
+let g:templates_directory = '~/.templates.fork'
 
 let g:templates_user_variables = [
         \ ['COMPANY', 'GetCOMPANY'],

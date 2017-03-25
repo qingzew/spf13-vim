@@ -125,6 +125,7 @@ create_symlinks() {
     lnif "$source_path/.vimrc.bundles" "$target_path/.vimrc.bundles"
     lnif "$source_path/.vimrc.before"  "$target_path/.vimrc.before"
     lnif "$source_path/.vim"           "$target_path/.vim"
+    lnif "$source_path/.templates.fork" "$target_path/.templates.fork"
 
     if program_exists "nvim"; then
         lnif "$source_path/.vim"       "$target_path/.config/nvim"
