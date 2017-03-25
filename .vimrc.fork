@@ -76,3 +76,10 @@ imap <C-h> <left>
 imap <C-j> <down>
 imap <C-k> <up>
 imap <C-l> <right>
+
+"设置文件检测编码
+set fileencodings=utf-8,gbk,gb2312,ucs-bom,chinese,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+"设置内部编码
+set encoding=utf-8
+"设置新建文件保存编码
+set fileencoding=utf-8
