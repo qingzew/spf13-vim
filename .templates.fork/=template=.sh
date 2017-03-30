@@ -1,3 +1,5 @@
+#! /bin/sh
+
 /*************************************************************
  * Copyright (C) %YEAR% %COMPANY% All Rights Reserved
  *
