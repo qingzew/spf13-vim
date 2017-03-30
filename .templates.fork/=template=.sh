@@ -6,7 +6,6 @@
 # Distributed under terms of the %LICENSE% license.
 ###############################################################
 
-
 # @file %FFILE%
 # @author %USER%
 # @date %FDATE%
