@@ -71,6 +71,18 @@
 
 " }
 
+" Use fork bundles config if available {
+    if filereadable(expand("~/.vimrc.bundles.fork"))
+        source ~/.vimrc.bundles.fork
+    endif
+" }
+
+" Use local bundles config if available {
+    if filereadable(expand("~/.vimrc.bundles.local"))
+        source ~/.vimrc.bundles.local
+    endif
+" }
+
 " Bundles {
 
     " Deps {
@@ -108,8 +120,10 @@
             Bundle 'tpope/vim-repeat'
             Bundle 'rhysd/conflict-marker.vim'
             Bundle 'jiangmiao/auto-pairs'
-            Bundle 'ctrlpvim/ctrlp.vim'
-            Bundle 'tacahiroy/ctrlp-funky'
+            Bundle 'Shougo/unite.vim'
+            Bundle 'Shougo/unite-outline'
+            "Bundle 'ctrlpvim/ctrlp.vim'
+            "Bundle 'tacahiroy/ctrlp-funky'
             Bundle 'terryma/vim-multiple-cursors'
             Bundle 'vim-scripts/sessionman.vim'
             Bundle 'matchit.zip'
@@ -137,6 +151,7 @@
             Bundle 'kana/vim-textobj-user'
             Bundle 'kana/vim-textobj-indent'
             Bundle 'gcmt/wildfire.vim'
+            Bundle 'aperezdc/vim-template'
         endif
     " }
 
@@ -294,18 +309,12 @@
         endif
     " }
 
+    " Protobuf {
+        Bundle 'uarun/vim-protobuf'
+    " }
+
     endif
 
 " }
 
-" Use fork bundles config if available {
-    if filereadable(expand("~/.vimrc.bundles.fork"))
-        source ~/.vimrc.bundles.fork
-    endif
-" }
 
-" Use local bundles config if available {
-    if filereadable(expand("~/.vimrc.bundles.local"))
-        source ~/.vimrc.bundles.local
-    endif
-" }

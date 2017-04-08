@@ -19,6 +19,18 @@
 "   You can find me at http://spf13.com
 " }
 
+" Use fork before if available {
+    if filereadable(expand("~/.vimrc.before.fork"))
+        source ~/.vimrc.before.fork
+    endif
+" }
+
+" Use local before if available {
+    if filereadable(expand("~/.vimrc.before.local"))
+        source ~/.vimrc.before.local
+    endif
+" }
+
 " spf13 options {
 
     " Prevent automatically changing to open file directory
@@ -98,14 +110,4 @@
     
 " }
 
-" Use fork before if available {
-    if filereadable(expand("~/.vimrc.before.fork"))
-        source ~/.vimrc.before.fork
-    endif
-" }
 
-" Use local before if available {
-    if filereadable(expand("~/.vimrc.before.local"))
-        source ~/.vimrc.before.local
-    endif
-" }

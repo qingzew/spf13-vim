@@ -172,7 +172,11 @@
                 \ ]
         endif
     " }
-
+    
+    "imap <C-h> <left>
+    "imap <C-j> <down>
+    "imap <C-k> <up>
+    imap <C-l> <right>
 " }
 
 " Vim UI {
@@ -1062,6 +1066,54 @@
         endif
     " }
 
+    "vim-template {
+        let g:license = 'LGPL3'
+        let g:templates_directory = '~/.templates.fork'
+
+        let g:templates_user_variables = [
+                                    \ ['COMPANY', 'GetCOMPANY'],
+                                    \ ]
+
+        function! GetCOMPANY()
+            return 'your company'
+        endfunction
+    "}
+
+    "syntastic {
+        let g:syntastic_cpp_checkers=['gcc']
+        let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+        
+        set statusline+=%#warningmsg#
+        set statusline+=%{SyntasticStatuslineFlag()}
+        set statusline+=%*
+        " 检测到错误和警告时的标志
+        let g:syntastic_error_symbol='✘✘'
+        let g:syntastic_warning_symbol='➤➤'
+        let g:syntastic_check_on_open=1
+        let g:syntastic_check_on_wq=0
+        let g:syntastic_enable_highlighting=1
+        " 修改高亮的背景色, 适应主题
+        highlight SyntasticErrorSign guifg=white guibg=black
+        " to see error location list
+        let g:syntastic_always_populate_loc_list = 0
+        let g:syntastic_auto_loc_list = 0
+        let g:syntastic_loc_list_height = 5
+        function! ToggleErrors()
+            let old_last_winnr = winnr('$')
+            lclose
+            if old_last_winnr == winnr('$')
+                " Nothing was closed, open syntastic error location panel
+                Errors
+            endif
+        endfunction
+        nnoremap <Leader>s :call ToggleErrors()<cr>      
+        
+        " 跳转到下一个/上一个错误处
+        nnoremap <Leader>sn :lnext<cr>
+        nnoremap <Leader>sp :lprevious<cr>
+        " 关闭某一语言的（如C/C++）的语法检测
+        "let g:syntastic_ignore_files=[".*\.c$", ".*\.h$", ".*\.cpp", ".*\.hpp"]
+    "}
 
 
 " }
