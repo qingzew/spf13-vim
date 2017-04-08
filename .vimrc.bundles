@@ -47,7 +47,7 @@
             " fallback into cp1252 instead of eg. iso-8859-15.
             " Newer Windows files might contain utf-8 or utf-16 LE so we might
             " want to try them first.
-            set fileencodings=ucs-bom,utf-8,utf-16le,cp1252,iso-8859-15
+            set fileencodings=utf-8,gbk,gb2312,ucs-bom,chinese,cp936,gb18030,big5,euc-jp,euc-kr,latin1 
           endif
         endif
     " }
@@ -103,7 +103,7 @@
     " In your .vimrc.before.local file
     " list only the plugin groups you will use
     if !exists('g:spf13_bundle_groups')
-        let g:spf13_bundle_groups=['general', 'writing', 'neocomplete', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc',]
+        let g:spf13_bundle_groups=['general', 'writing', 'programming', 'youcompleteme', 'python','html', 'protobuf']
     endif
 
     " To override all the included bundles, add the following to your
@@ -122,8 +122,6 @@
             Bundle 'jiangmiao/auto-pairs'
             Bundle 'Shougo/unite.vim'
             Bundle 'Shougo/unite-outline'
-            "Bundle 'ctrlpvim/ctrlp.vim'
-            "Bundle 'tacahiroy/ctrlp-funky'
             Bundle 'terryma/vim-multiple-cursors'
             Bundle 'vim-scripts/sessionman.vim'
             Bundle 'matchit.zip'
@@ -310,7 +308,9 @@
     " }
 
     " Protobuf {
-        Bundle 'uarun/vim-protobuf'
+        if count(g:spf13_bundle_groups, 'protobuf')
+            Bundle 'uarun/vim-protobuf'
+        endif
     " }
 
     endif
