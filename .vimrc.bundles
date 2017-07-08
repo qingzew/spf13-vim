@@ -138,6 +138,13 @@
             Bundle 'kana/vim-textobj-indent'
             Bundle 'gcmt/wildfire.vim'
             Bundle 'aperezdc/vim-template'
+            " Add maktaba and codefmt to the runtimepath.
+            " (The latter must be installed before it can be used.)
+            Bundle 'google/vim-maktaba'
+            Bundle 'google/vim-codefmt'
+            " Also add Glaive, which is used to configure codefmt's maktaba flags. See
+            " `:help :Glaive` for usage.
+            Bundle 'google/vim-glaive'
         endif
     " }
 
