@@ -55,7 +55,7 @@
     " Setup Bundle Support {
         " The next three lines ensure that the ~/.vim/bundle/ system works
         filetype off
-        set rtp+=~/.vim/bundle/vundle
+        set rtp+=~/.vim/bundle/Vundle.vim
         call vundle#begin()
     " }
 
@@ -74,7 +74,7 @@
 " Bundles {
 
     " Deps {
-        Plugin 'gmarik/vundle'
+        Plugin 'VundleVim/Vundle.vim'
         Plugin 'MarcWeber/vim-addon-mw-utils'
         Plugin 'tomtom/tlib_vim'
         if executable('ag')
