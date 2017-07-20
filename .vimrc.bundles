@@ -102,8 +102,8 @@
     " General {
         if count(g:spf13_bundle_groups, 'general')
             Plugin 'scrooloose/nerdtree'
-            Plugin 'altercation/vim-colors-solarized'
-            Plugin 'spf13/vim-colors'
+            Bundle 'altercation/vim-colors-solarized'
+            Bundle 'spf13/vim-colors'
             Plugin 'tpope/vim-surround'
             Plugin 'tpope/vim-repeat'
             Plugin 'rhysd/conflict-marker.vim'
@@ -161,7 +161,7 @@
         if count(g:spf13_bundle_groups, 'programming')
             " Pick one of the checksyntax, jslint, or syntastic
             Plugin 'scrooloose/syntastic'
-            Plugin 'tpope/vim-fugitive'
+            Bundle 'tpope/vim-fugitive'
             Plugin 'mattn/webapi-vim'
             Plugin 'mattn/gist-vim'
             Plugin 'scrooloose/nerdcommenter'
