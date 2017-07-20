@@ -21,7 +21,7 @@ app_name='spf13-vim'
 [ -z "$REPO_BRANCH" ] && REPO_BRANCH='dev'
 debug_mode='0'
 fork_maintainer='1'
-[ -z "$VUNDLE_URI" ] && VUNDLE_URI="https://github.com/gmarik/vundle.git"
+[ -z "$VUNDLE_URI" ] && VUNDLE_URI="https://github.com/VundleVim/Vundle.vim"
 
 ############################  BASIC SETUP TOOLS
 msg() {
@@ -196,7 +196,7 @@ setup_fork_mode "$fork_maintainer" \
                 "$APP_PATH" \
                 "$HOME"
 
-sync_repo       "$HOME/.vim/bundle/vundle" \
+sync_repo       "$HOME/.vim/bundle/Vundle.vim" \
                 "$VUNDLE_URI" \
                 "master" \
                 "vundle"
