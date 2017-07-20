@@ -323,3 +323,5 @@
         source ~/.vimrc.bundles.local
     endif
 " }
+
+call vundle#end() 
