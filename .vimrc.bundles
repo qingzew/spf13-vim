@@ -324,4 +324,7 @@
     endif
 " }
 
-call vundle#end() 
+ 
+" Setup Bundle Support {
+    call vundle#end()
+" }
